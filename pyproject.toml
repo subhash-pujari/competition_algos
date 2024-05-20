@@ -1,0 +1,76 @@
+[tool.poetry]
+name = "blind75"
+version = "0.0.1"
+description = "Blind75 solutions"
+authors = [
+    "Subhash Pujari <subhash.pujari@gmail.com>"
+]
+license = "MIT license"
+readme = "Readme.md"
+
+[tool.poetry.dependencies]
+python = "^3.11,<3.13"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = ">=0.1.14"
+pre-commit = "<=3.6.0"
+pytest = ">=7.4.4"
+mypy = ">=1.8.0"
+pytest-cov = ">=4.1.0"
+types-requests = "^2.31.0.20240125"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 88
+include = ["blind75", "tests"]
+select = [
+    "A",
+    "ANN",
+    "B",
+    "C4",
+    "F",
+    "G",
+    "I",
+    "ICN",
+    "ISC",
+    "N",
+    "PERF",
+    "PL",
+    "PT",
+    "PTH",
+    "PYI",
+    "RET",
+    "RUF",
+    "SIM",
+    "UP",
+    "W"
+]
+ignore = [
+    "ISC001",
+    "ISC002",
+    "W191"
+]
+
+[tool.ruff.pydocstyle]
+convention = "google"
+
+[tool.ruff.isort]
+known-first-party = ["normcap"]
+
+[tool.ruff.flake-tidy-imports]
+ban-relative-imports = "all"
+
+[tool.mypy]
+files = ["blind75/**/*py", "tests/**/*.py"]
+follow_imports = "skip"
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = ["-vv", "--duration=5", "--showlocals"]
