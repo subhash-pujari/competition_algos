@@ -4,7 +4,7 @@ Solution From: https://leetcode.com/problems/merge-two-sorted-lists/solutions/51
 """
 
 import sys
-sys.path.append("./")
+sys.path.append("./coding")
 
 from typing import Optional
 

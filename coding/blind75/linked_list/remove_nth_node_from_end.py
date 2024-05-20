@@ -4,7 +4,7 @@ Solution: https://leetcode.com/problems/remove-nth-node-from-end-of-list/solutio
 """
 
 import sys
-sys.path.append("./")
+sys.path.append("./coding")
 
 from typing import Optional
 

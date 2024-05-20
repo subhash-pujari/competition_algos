@@ -1,4 +1,7 @@
 
+import sys
+sys.path.append("./coding")
+
 from linked_list.utils import ListNode, generate_list
 
 class Solution(object):

@@ -4,7 +4,7 @@ Solution: https://leetcode.com/problems/merge-k-sorted-lists/solutions/3285930/1
 """
 
 import sys
-sys.path.append("./")
+sys.path.append("./coding")
 
 from typing import Optional, List
 
