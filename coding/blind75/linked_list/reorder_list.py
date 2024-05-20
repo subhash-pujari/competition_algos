@@ -4,7 +4,7 @@ Solution: https://leetcode.com/problems/reorder-list/solutions/4912096/beat-99-e
 """
 
 import sys
-sys.path.append("./")
+sys.path.append("./coding")
 
 from typing import Optional
 
