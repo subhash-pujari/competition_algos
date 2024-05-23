@@ -70,3 +70,30 @@ def generate_binary_tree_from_dict(tree_dict):
             tree = nodes[val]
 
     return tree
+
+
+def insert(node, num):
+    if node.val > num:
+        if node.left is None:
+            node.left = TreeNode(num)
+            return
+        else:
+            insert(node.left, num)
+    else:
+
+        if node.right is None:
+            node.right = TreeNode(num)
+            return
+        else:
+            insert(node.right, num)
+
+
+def generate_binary_tree_list(nums):
+    tree = None
+
+    for i in nums:
+        if tree is None:
+            tree = TreeNode(i)
+        else:
+            insert(tree, i)
+    return tree

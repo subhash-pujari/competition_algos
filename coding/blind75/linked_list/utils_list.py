@@ -1,7 +1,7 @@
 class ListNode:
     def __init__(self, num) -> None:
         self.next = None
-        self.data = num
+        self.val = num
 
 
 def generate_list(nums):
@@ -19,5 +19,5 @@ def generate_list(nums):
 def print_linked_list(list_head):
     curr = list_head
     while curr:
-        print(curr.data)
+        print(curr.val)
         curr = curr.next
