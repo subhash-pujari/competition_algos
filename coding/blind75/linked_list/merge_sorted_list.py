@@ -17,7 +17,7 @@ class Solution_1:
         cur = dummy
 
         while list1 and list2:
-            if list1.data > list2.data:
+            if list1.val > list2.val:
                 cur.next = list2
                 list2 = list2.next
             else:

@@ -24,7 +24,7 @@ head = generate_list([1,2,3,4,5])
 
 curr = head
 while curr.next:
-    print(curr.data)
+    print(curr.val)
     curr = curr.next
 
 # curr.next = head.next.next   

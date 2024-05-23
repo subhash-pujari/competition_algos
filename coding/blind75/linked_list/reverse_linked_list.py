@@ -24,5 +24,5 @@ if __name__ == "__main__":
 
     curr = head
     while curr:
-        print(curr.data)
+        print(curr.val)
         curr = curr.next
