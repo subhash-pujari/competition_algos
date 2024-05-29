@@ -1,8 +1,9 @@
-
 import sys
+
 sys.path.append("./coding")
 
-from linked_list.utils import ListNode, generate_list
+from linked_list.utils import generate_list
+
 
 class Solution(object):
     def reverseList(self, head):
@@ -17,9 +18,9 @@ class Solution(object):
 
         return prev_node
 
-if __name__ == "__main__":
 
-    head = generate_list([1,2,3,4,5])
+if __name__ == "__main__":
+    head = generate_list([1, 2, 3, 4, 5])
     head = Solution().reverseList(head)
 
     curr = head

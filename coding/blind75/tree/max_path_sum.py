@@ -4,10 +4,14 @@ solution: https://leetcode.com/problems/binary-tree-maximum-path-sum/
 """
 
 import sys
+
 sys.path.append("./coding")
 
 from typing import Optional
-from blind75.tree.utils_tree import TreeNode, traverse, generate_binary_tree_from_dict, generate_binary_tree_list
+from blind75.tree.utils_tree import (
+    TreeNode,
+    generate_binary_tree_list,
+)
 
 
 class Solution:
@@ -15,7 +19,7 @@ class Solution:
         ans = [root.val]
 
         def DFS(root):
-            if root == None:
+            if root is None:
                 return 0
 
             lmax = DFS(root.left)
@@ -23,15 +27,15 @@ class Solution:
             lmax = 0 if lmax < 0 else lmax
             rmax = 0 if rmax < 0 else rmax
 
-            ans[0] = max(ans[0] , root.val + lmax + rmax)
+            ans[0] = max(ans[0], root.val + lmax + rmax)
 
-            return root.val + max(lmax , rmax)  
+            return root.val + max(lmax, rmax)
 
-        DFS(root) 
+        DFS(root)
         return ans[0]
 
 
 if __name__ == "__main__":
-    tree = generate_binary_tree_list([3,9,1,15,7])
+    tree = generate_binary_tree_list([3, 9, 1, 15, 7])
 
     print(Solution().maxPathSum(tree))

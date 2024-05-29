@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def findMin(self, nums: List[int]) -> int:
         left, right = 0, len(nums) - 1
@@ -9,8 +10,8 @@ class Solution:
                 right = mid
             else:
                 left = mid + 1
-                
-        return nums[left]
-    
 
-print(Solution().findMin([3,4,5,1,2]))
+        return nums[left]
+
+
+print(Solution().findMin([3, 4, 5, 1, 2]))

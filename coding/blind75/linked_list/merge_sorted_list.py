@@ -4,15 +4,18 @@ Solution From: https://leetcode.com/problems/merge-two-sorted-lists/solutions/51
 """
 
 import sys
+
 sys.path.append("./coding")
 
 from typing import Optional
 
 from blind75.linked_list.utils import ListNode, generate_list, print_linked_list
 
+
 class Solution_1:
-    
-    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+    def mergeTwoLists(
+        self, list1: Optional[ListNode], list2: Optional[ListNode]
+    ) -> Optional[ListNode]:
         dummy = ListNode(-float("inf"))
         cur = dummy
 
@@ -23,20 +26,20 @@ class Solution_1:
             else:
                 cur.next = list1
                 list1 = list1.next
-            
+
             cur = cur.next
-        
+
         if list1:
             cur.next = list1
         else:
             cur.next = list2
-        
+
         return dummy.next
 
 
 if __name__ == "__main__":
-    list_1 = generate_list([1,2,4])
-    list_2 = generate_list([1,3,4])
+    list_1 = generate_list([1, 2, 4])
+    list_2 = generate_list([1, 3, 4])
 
     list_head = Solution_1().mergeTwoLists(list_1, list_2)
 
@@ -47,4 +50,3 @@ if __name__ == "__main__":
 
     # print("solution 2")
     # print_linked_list(list_head)
-    

@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         left, right = 0, len(nums) - 1
@@ -24,5 +25,6 @@ class Solution:
                     right = mid - 1
 
         return -1
-    
-print(Solution().search([4,5,6,7,0,1,2], 0))
+
+
+print(Solution().search([4, 5, 6, 7, 0, 1, 2], 0))

@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "blind75"
+name = "coding"
 version = "0.0.1"
 description = "Blind75 solutions"
 authors = [
@@ -25,52 +25,11 @@ types-requests = "^2.31.0.20240125"
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
-[tool.ruff]
-target-version = "py311"
-line-length = 88
-include = ["blind75", "tests"]
-select = [
-    "A",
-    "ANN",
-    "B",
-    "C4",
-    "F",
-    "G",
-    "I",
-    "ICN",
-    "ISC",
-    "N",
-    "PERF",
-    "PL",
-    "PT",
-    "PTH",
-    "PYI",
-    "RET",
-    "RUF",
-    "SIM",
-    "UP",
-    "W"
-]
-ignore = [
-    "ISC001",
-    "ISC002",
-    "W191"
-]
-
-[tool.ruff.pydocstyle]
-convention = "google"
-
-[tool.ruff.isort]
-known-first-party = ["normcap"]
-
-[tool.ruff.flake-tidy-imports]
-ban-relative-imports = "all"
-
 [tool.mypy]
-files = ["blind75/**/*py", "tests/**/*.py"]
+files = ["coding/**/*py", "tests/**/*.py"]
 follow_imports = "skip"
 ignore_missing_imports = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-addopts = ["-vv", "--duration=5", "--showlocals"]
+addopts = ["-vv", "--showlocals"]

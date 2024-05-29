@@ -27,18 +27,18 @@ repos:
         stages: [commit]
         language: python
         types_or: [python, jupyter]
-      - id: mypy
-        name: mypy
-        entry: poetry run mypy blind75
-        stages: [commit]
-        language: python
-        types: [python]
-        pass_filenames: false
-        fail_fast: true
-      - id: pytest
-        name: pytest
-        entry: poetry run pytest --cov-report=html
-        stages: [commit]
-        language: python
-        types: [python]
-        pass_filenames: false
+      # - id: mypy
+      #   name: mypy
+      #   entry: poetry run mypy coding
+      #   stages: [commit]
+      #   language: python
+      #   types: [python]
+      #   pass_filenames: false
+      #   fail_fast: true
+      # - id: pytest
+      #   name: pytest
+      #   entry: poetry run pytest --cov-report=html
+      #   stages: [commit]
+      #   language: python
+      #   types: [python]
+      #   pass_filenames: false

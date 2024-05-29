@@ -5,9 +5,9 @@ Problem: https://leetcode.com/problems/string-compression/description/?envType=s
 
 from typing import List
 
+
 class Solution:
     def compress(self, chars: List[str]) -> int:
-        
         curr_ch = None
         curr_ch_count = 0
         s = ""
@@ -41,6 +41,11 @@ class Solution:
 
         return [item for item in s]
 
-print(Solution().compress(["a","a","b","b","c","c","c"]))
+
+print(Solution().compress(["a", "a", "b", "b", "c", "c", "c"]))
 print(Solution().compress(["a"]))
-print(Solution().compress(["a","b","b","b","b","b","b","b","b","b","b","b","b"]))
+print(
+    Solution().compress(
+        ["a", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b"]
+    )
+)

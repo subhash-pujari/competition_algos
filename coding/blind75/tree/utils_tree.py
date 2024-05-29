@@ -1,18 +1,14 @@
-
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
         self.left = left
         self.right = right
-        
+
 
 def traverse(root, traversal_type):
-
     if traversal_type == "lnr":
-
         if root:
-
             if root.left:
                 traverse(root.left, "lnr")
 
@@ -22,9 +18,7 @@ def traverse(root, traversal_type):
                 traverse(root.right, "lnr")
 
     elif traversal_type == "lrn":
-
         if root:
-
             if root.left:
                 traverse(root.left, "lrn")
 
@@ -34,9 +28,7 @@ def traverse(root, traversal_type):
             print(root.val)
 
     elif traversal_type == "nlr":
-
         if root:
-
             print(root.val)
 
             if root.left:
@@ -47,14 +39,12 @@ def traverse(root, traversal_type):
 
 
 def generate_binary_tree_from_dict(tree_dict):
-
     tree = None
     nodes = dict()
 
     for val in tree_dict:
-        
         if val not in nodes:
-            nodes[val] = TreeNode(val)        
+            nodes[val] = TreeNode(val)
 
         left, right = tree_dict[val]
         left_node = TreeNode(left)
@@ -80,7 +70,6 @@ def insert(node, num):
         else:
             insert(node.left, num)
     else:
-
         if node.right is None:
             node.right = TreeNode(num)
             return

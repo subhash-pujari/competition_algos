@@ -3,16 +3,16 @@ Solution: https://leetcode.com/problems/maximum-depth-of-binary-tree/description
 """
 
 import sys
+
 sys.path.append("./coding")
 
 from typing import Optional
-from blind75.tree.utils_tree import TreeNode, traverse, generate_binary_tree_from_dict
+from blind75.tree.utils_tree import TreeNode, generate_binary_tree_from_dict
 
 
 class Solution:
-
     def maxDepth(self, root: Optional[TreeNode]) -> int:
-        if root == None:
+        if root is None:
             return 0
         left_depth = self.maxDepth(root.left)
         right_depth = self.maxDepth(root.right)
@@ -20,7 +20,6 @@ class Solution:
 
 
 if __name__ == "__main__":
-
     tree_dict = {
         3: (9, 20),
         20: (15, 7),

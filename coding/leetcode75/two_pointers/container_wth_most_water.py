@@ -1,7 +1,4 @@
-from typing import List
-
 class Solution:
-    
     def maxArea(self, height):
         left = 0
         right = len(height) - 1
@@ -19,4 +16,4 @@ class Solution:
         return maxArea
 
 
-print(Solution().maxArea([1,8,6,2,5,4,8,3,7]))
+print(Solution().maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]))

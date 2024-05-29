@@ -4,15 +4,19 @@ Solution: https://leetcode.com/problems/invert-binary-tree/solutions/2463600/eas
 """
 
 import sys
+
 sys.path.append("./coding")
 
-from typing import Optional
-from blind75.tree.utils_tree import TreeNode, traverse, generate_binary_tree_from_dict, generate_binary_tree_list
+from blind75.tree.utils_tree import (
+    traverse,
+    generate_binary_tree_list,
+)
+
 
 class Solution(object):
     def invertTree(self, root):
         # Base case...
-        if root == None:
+        if root is None:
             return root
         # swapping process...
         root.left, root.right = root.right, root.left
@@ -20,10 +24,11 @@ class Solution(object):
         self.invertTree(root.left)
         # Call the function recursively for the right subtree...
         self.invertTree(root.right)
-        return root 
+        return root
+
 
 if __name__ == "__main__":
-    tree = generate_binary_tree_list([3,9,20,15,7])
+    tree = generate_binary_tree_list([3, 9, 20, 15, 7])
 
     traverse(tree, "lnr")
 

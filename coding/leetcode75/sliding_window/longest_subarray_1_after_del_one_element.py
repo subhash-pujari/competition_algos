@@ -1,9 +1,10 @@
 """
 Problem: https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/description/?envType=study-plan-v2&envId=leetcode-75
-Solution: 
+Solution:
 """
 
 from typing import List
+
 
 def longestSubarray(nums: List[int]) -> int:
     left, right = 0, 0
@@ -15,7 +16,8 @@ def longestSubarray(nums: List[int]) -> int:
             if nums[left] == 0:
                 k += 1
             left += 1
-    return right - left 
+    return right - left
 
-print(longestSubarray([1,1,0,1]))
-print(longestSubarray([0,1,1,1,0,1,1,0,1]))
+
+print(longestSubarray([1, 1, 0, 1]))
+print(longestSubarray([0, 1, 1, 1, 0, 1, 1, 0, 1]))

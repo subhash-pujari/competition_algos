@@ -8,5 +8,6 @@ class Solution:
             elif prices[i] - buy > profit:
                 profit = prices[i] - buy
         return profit
-    
-print(Solution().maxProfit(prices = [7,1,5,3,6,4]))
+
+
+print(Solution().maxProfit(prices=[7, 1, 5, 3, 6, 4]))

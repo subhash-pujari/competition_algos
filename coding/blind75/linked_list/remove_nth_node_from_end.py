@@ -4,6 +4,7 @@ Solution: https://leetcode.com/problems/remove-nth-node-from-end-of-list/solutio
 """
 
 import sys
+
 sys.path.append("./coding")
 
 from typing import Optional
@@ -31,9 +32,8 @@ class Solution:
 
 
 if __name__ == "__main__":
+    reduced_list = Solution().removeNthFromEnd(generate_list([1, 2, 3, 4, 5]), 2)
 
-    reduced_list = Solution().removeNthFromEnd(generate_list([1,2,3,4,5]), 2)
-    
     print_linked_list(reduced_list)
 
     reduced_list = Solution().removeNthFromEnd(reduced_list, 1)

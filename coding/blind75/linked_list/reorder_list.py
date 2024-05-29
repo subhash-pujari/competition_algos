@@ -4,14 +4,14 @@ Solution: https://leetcode.com/problems/reorder-list/solutions/4912096/beat-99-e
 """
 
 import sys
+
 sys.path.append("./coding")
 
-from typing import Optional
 
-from blind75.linked_list.utils import ListNode, generate_list, print_linked_list
+from blind75.linked_list.utils import generate_list, print_linked_list
+
 
 class Solution(object):
-
     # Function for reversing
     def reverse(self, head):
         prev = None
@@ -19,7 +19,7 @@ class Solution(object):
         while current:
             prev, prev.next, current = current, prev, current.next
         return prev
-    
+
     def reorderList(self, head):
         """
         :type head: ListNode
@@ -50,6 +50,7 @@ class Solution(object):
 
         return head
 
+
 # need to check this algorithm again
-reordered_list = Solution().reorderList(generate_list([1,2,3,4,5]))
+reordered_list = Solution().reorderList(generate_list([1, 2, 3, 4, 5]))
 print_linked_list(reordered_list)
